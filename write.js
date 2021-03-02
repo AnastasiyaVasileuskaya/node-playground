@@ -5,16 +5,16 @@ const file = 'tools.json'
 
 const tool = process.argv[2]
 
-//example from fetch:
-// fetch(url)
-// .then(res => res.json())
-// .then(data => console.log(data))
-
 fs.promises
   .readFile(file, { encoding: 'utf-8' })
   .then(addToolToJSON)
   .then(onWriteSuccess)
   .catch(onError)
+
+//example from fetch:
+// fetch(url)
+// .then(res => res.json())
+// .then(data => console.log(data))
 
 function addToolToJSON(data) {
   const tools = JSON.parse(data)
