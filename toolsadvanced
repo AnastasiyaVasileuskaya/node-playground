@@ -2,7 +2,6 @@
 const chalk = require('chalk')
 const fs = require('fs')
 const { exit } = require('process')
-const { cursorTo } = require('readline')
 
 const file = 'tools.json'
 const tool = process.argv[2]
