@@ -6,5 +6,5 @@ const max = Number(process.argv[2])
 console.log(random(max))
 */
 
-const read = require('./read.js')
-read('.prettierrc')
+const addStudent = require('./addStudent.js')
+addStudent({ name: process.argv[2], role: process.argv[3], php: false })
